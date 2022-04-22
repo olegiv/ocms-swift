@@ -37,7 +37,7 @@ struct TopMenu {
         var html = "";
         
         menuItems.forEach { menuItem in
-            let doc = Document(.html) {
+            let doc = Document(.unspecified) {
                 Li {
                     A(menuItem["title"] as? String)
                         .href(menuItem["uri"] as! String)
@@ -45,7 +45,11 @@ struct TopMenu {
                 }
             }
             
-            html = html + DocumentRenderer(minify: false, indent: 2).render(doc)
+            var minify = true
+            if _isDebugAssertConfiguration() {
+                minify = false
+            }            
+            html = html + DocumentRenderer(minify: minify).render(doc)
         }
         
         return html
