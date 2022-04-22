@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        #extend("core/light/head"):
+        #endextend
+    </head>
+    <body>
+        #extend("core/light/header"):
+        #endextend
+        #extend("core/light/content"):
+        #endextend
+        #extend("core/light/footer"):
+        #endextend
+    </body>
+</html>

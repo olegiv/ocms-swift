@@ -1,0 +1,5 @@
+<nav class="right helper">
+    <ul class="menu sf-menu js-menu">
+        #unsafeHTML(top_menu)
+    </ul>
+</nav>

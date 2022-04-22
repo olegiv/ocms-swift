@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        #extend("core/winter/head"):
+        #endextend
+    </head>
+    <body>
+        <div class="page js-page">
+            #extend("core/winter/header"):
+            #endextend
+            #extend("core/winter/content-node"):
+            #endextend
+            #extend("core/winter/footer"):
+            #endextend
+        </div>
+        <script src="/static/#(layout_dir)/js/ocms.min.js"></script>
+        <script src="/static/#(layout_dir)/js/custom.js"></script>
+    </body>
+</html>

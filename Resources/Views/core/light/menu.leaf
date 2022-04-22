@@ -1,0 +1,5 @@
+<nav class="">
+    <ul class="">
+        #unsafeHTML(top_menu)
+    </ul>
+</nav>
