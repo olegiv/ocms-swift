@@ -12,7 +12,7 @@ func routes(_ app: Application) throws {
         let alias = req.url.path
         
         guard let node = try await NodeModel.query(on: req.db).filter(\.$alias == alias).first() else {
-            throw Abort(.notFound)
+            throw Abort(.notFound, reason: "Sorry, you tried to access a page that does not exist or was moved")
         }
         
         return try await req.view.render("\(req.application.config.layoutDir)/page-node",

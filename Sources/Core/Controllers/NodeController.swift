@@ -23,7 +23,7 @@ struct NodeController: RouteCollection {
         }
 
         guard let nodeData = try await NodeModel.find(nodeID, on: req.db) as NodeModel? else {
-            throw Abort(.notFound)
+            throw Abort(.notFound, reason: "Sorry, you tried to access a page that does not exist or was moved")
         }
 
         return try await req.view.render("\(req.application.config.layoutDir)/page-node",

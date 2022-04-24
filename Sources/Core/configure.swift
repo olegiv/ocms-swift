@@ -3,11 +3,15 @@ import Fluent
 import FluentSQLiteDriver
 import Leaf
 import Vapor
+import LeafErrorMiddleware
 
 // configures your application
 public func configure(_ app: Application) throws {
     
     app.config = .init(layoutDir: Environment.get("LAYOUT") ?? "core/light")
+    
+    // Errors
+    app.middleware.use(LeafErrorMiddlewareDefaultGenerator.build())
     
     // Static files
     app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))

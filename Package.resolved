@@ -64,6 +64,15 @@
       }
     },
     {
+      "identity" : "leaf-error-middleware",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/brokenhandsio/leaf-error-middleware.git",
+      "state" : {
+        "revision" : "f2f7f54449d5b09a76c408587edfc2944da3a697",
+        "version" : "3.1.0"
+      }
+    },
+    {
       "identity" : "leaf-kit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/leaf-kit.git",

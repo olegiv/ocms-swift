@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        #extend("core/error/head"):
+        #endextend
+    </head>
+    <body>
+        <div class="page js-page">
+            #extend("core/error/header"):
+            #endextend
+            #extend("core/error/content-node"):
+            #endextend
+            #extend("core/error/footer"):
+            #endextend
+        </div>
+        <script src="/static/core/winter/js/ocms.min.js"></script>
+        <script src="/static/core/winter/js/custom.js"></script>
+    </body>
+</html>

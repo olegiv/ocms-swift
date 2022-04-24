@@ -14,7 +14,8 @@ let package = Package(
 //        .package(url: "https://github.com/vapor/fluent-mysql-driver.git", from: "4.0.0"),
         .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", from: "4.0.0"),
         .package(url: "https://github.com/vapor/leaf.git", from: "4.0.0"),
-        .package(url: "https://github.com/binarybirds/swift-html", from: "1.2.0")
+        .package(url: "https://github.com/binarybirds/swift-html", from: "1.2.0"),
+        .package(url: "https://github.com/brokenhandsio/leaf-error-middleware.git", from: "3.0.0")
     ],
     targets: [
         .target(
@@ -25,7 +26,8 @@ let package = Package(
                 .product(name: "FluentSQLiteDriver", package: "fluent-sqlite-driver"),
                 .product(name: "Leaf", package: "leaf"),
                 .product(name: "SwiftHtml", package: "swift-html"),
-                .product(name: "Vapor", package: "vapor")
+                .product(name: "Vapor", package: "vapor"),
+                .product(name: "LeafErrorMiddleware", package: "leaf-error-middleware")
             ],
             swiftSettings: [
                 .unsafeFlags(["-cross-module-optimization"], .when(configuration: .release))
