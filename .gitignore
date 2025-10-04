@@ -10,3 +10,5 @@ db.sqlite
 .env.*
 !Resources/DB/
 .bin
+.idea
+.vscode
