@@ -1,4 +1,4 @@
-// swift-tools-version:5.6
+// swift-tools-version:6.2
 
 import PackageDescription
 
@@ -9,13 +9,16 @@ let package = Package(
     ],
     dependencies: [
         // 💧 A server-side Swift web framework.
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
         .package(url: "https://github.com/vapor/fluent.git", from: "4.0.0"),
 //        .package(url: "https://github.com/vapor/fluent-mysql-driver.git", from: "4.0.0"),
         .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", from: "4.0.0"),
         .package(url: "https://github.com/vapor/leaf.git", from: "4.0.0"),
         .package(url: "https://github.com/binarybirds/swift-html", from: "1.2.0"),
-        .package(url: "https://github.com/brokenhandsio/leaf-error-middleware.git", from: "3.0.0")
+        .package(url: "https://github.com/brokenhandsio/leaf-error-middleware.git", from: "3.0.0"),
+
+        // 6.2 Swift build fix
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.99.3"),
+        .package(url: "https://github.com/vapor/multipart-kit.git", from: "4.7.0"),
     ],
     targets: [
         .target(
